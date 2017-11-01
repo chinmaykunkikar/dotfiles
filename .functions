@@ -1,0 +1,33 @@
+# mkdir and cd into the directory
+function mkcd() {
+  mkdir -p "$@" && cd "$@"
+}
+
+# update
+function update() {
+  sudo apt update
+}
+
+# upgrade
+function upgrade() {
+  sudo apt update && sudo apt upgrade -y
+}
+
+# install
+function innstall() {
+  sudo apt install "$@"
+}
+
+# cd working
+function wk() {
+if [ -d "/home/chinmay/working" ]; then
+  cd ~/working/"$1"
+else
+  echo -e "Cannot find ~/working directory."
+fi
+}
+
+# cd downloads
+function dl() {
+  cd ~/Downloads
+}

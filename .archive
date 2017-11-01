@@ -1,0 +1,33 @@
+# Extract possible archives with 'extract $1'
+function extract() {
+    if [ -f $1 ] ; then
+        case $1 in
+            *.tar.bz2)   $(mkdir "$(basename -s .tar.bz2 $1)") && tar xvjf $1 -C $(basename -s .tar.bz2 $1)/  ;;
+            *.tar.gz)    $(mkdir "$(basename -s .tar.gz $1)") && tar xvzf $1 -C $(basename -s .tar.gz $1)/    ;;
+            *.bz2)       bunzip2 $1      ;;
+            *.rar)       unrar x $1      ;;
+            *.gz)        gunzip $1       ;;
+            *.tar)       $(mkdir "$(basename -s .tar $1)") && tar xvf $1 -C $(basename -s .tar $1)/           ;;
+            *.tbz2)      $(mkdir "$(basename -s .tbz2 $1)") && tar xvjf $1 -C $(basename -s .tbz2 $1)/        ;;
+            *.tgz)       $(mkdir "$(basename -s .tgz $1)") && tar xvzf $1 -C $(basename -s .tgz $1)/          ;;
+            *.zip)       unzip $1 -d $(basename -s .zip "$1")/ ;;
+            *.Z)         uncompress $1   ;;
+            *.7z)        7z x $1         ;;
+            *)           echo "'$1' cannot be extracted via >extract<" ;;
+        esac
+    else
+        echo "$1 is not a valid file."
+    fi
+}
+
+# Create an archive (*.tar.gz) from given directory
+function maketar() {
+    if [ $1 ] ; then
+      tar cvzf "${2%%/}.tar.gz"  "${1%%/}/";
+    else
+      tar cvzf $(basename $(pwd)).tar.gz ../$(basename $(pwd));
+    fi
+}
+
+# Create a ZIP archive of a file or folder
+function makezip() { zip -r "${1%%/}.zip" "$1" ; }

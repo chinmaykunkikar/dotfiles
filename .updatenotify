@@ -1,0 +1,20 @@
+#!/bin/bash
+# A simple script that notifies you with
+# number of updates available after every reboot.
+#
+# 1. Put this at the end of 'crontab -e':
+#        @reboot /bin/bash ~/.dotfiles/.updatenotify
+# 2. Put this in your ~/.bashrc:
+#        if [ -f /tmp/update_available.log ]; then
+#           cat /tmp/update_available.log && rm /tmp/update_available.log
+#        fi
+# 3. Reboot and you're good to go.
+#
+# TODO Get rid of hard coding in .bashrc
+
+LOG_FILE=/tmp/apt_update.log
+KEEPER=/tmp/update_available.log
+sudo apt update &> $LOG_FILE
+UPDATES=$(grep 'packages can be upgraded' $LOG_FILE | cut -c 1)
+echo -e "You have $UPDATES updates available." &> $KEEPER
+rm $LOG_FILE
