@@ -1,1 +1,5 @@
 # Your git aliases go here
+
+
+alias g='git'
+alias gck='git cherry-pick'

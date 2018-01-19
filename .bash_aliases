@@ -7,4 +7,4 @@ alias cs='reset && ls'               # Reset terminal before ls
 alias rm='rm -rf'                    # #YOLO
 alias mkdir='mkdir -p'               # Of course make subdirectories. Duh.
 alias apt-get='apt'                  # Get past apt-get now
-alias git=hub                        # https://github.com/github/hub/blob/master/README.md
+eval "$(hub alias -s)"               # https://github.com/github/hub/blob/master/README.md
