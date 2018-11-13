@@ -1,0 +1,34 @@
+-- sudo visudo
+# chinmay
+chinmay ALL=(ALL) NOPASSWD: ALL
+
+-- sudo nano /etc/gdm3/daemon.conf
+# Enabling automatic login
+  AutomaticLoginEnable = true
+  AutomaticLogin = chinmay
+
+-- .bash_aliases
+alias nano='nano -S'
+alias update='sudo apt update'
+alias upgrade='sudo apt update && sudo apt upgrade'
+alias rm='rm -fr'
+alias apt='sudo apt'
+alias apt-get='apt'
+alias ls='ls --color=auto --group-directories-first -AXgho'
+alias poweroff='sudo poweroff'
+alias reboot='sudo reboot'
+
+-- /usr/bin/google-chrome-stable --password-store=basic --force-device-scale-factor=1.25 %U
+
+-- /etc/apt/sources.list.d/google-chrome.list
+### THIS FILE IS AUTOMATICALLY CONFIGURED ###
+# You may comment out this entry, but any other modifications may be lost.
+deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
+
+-- /etc/apt/sources.list.d/stretch-backports.list
+deb [arch=amd64] http://ftp.debian.org/debian stretch-backports main contrib non-free
+
+-- /etc/apt/sources.list.d/vscode.list
+deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main
+
+-- transpatent grub background
