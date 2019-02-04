@@ -1,0 +1,31 @@
+#
+# list of packages installed manually
+#
+# The following command was a real help:
+# 'comm -23 <(apt-mark showmanual | sort -u) <(gzip -dc /var/log/installer/initial-status.gz | sed -n 's/^Package: //p' | sort -u)'
+# Thanks stackoverflow.
+# 
+
+android-studio
+android-tools-adb
+apt-transport-https
+build-essential
+code
+default-jdk
+fonts-open-sans
+gcc-multilib
+git
+g++-multilib
+google-chrome-stable
+gparted
+gperf
+openjdk-8-jdk
+pngcrush
+r-base
+rstudio
+ruby
+ruby2.5-dev
+ruby-dev
+schedtool
+telegram-desktop
+vim

@@ -1,0 +1,7 @@
+[user]
+	email = chinmay.kunkikar@gmail.com
+	name = Chinmay Kunkikar
+[core]
+	editor = vim
+[credential]
+	helper = store
