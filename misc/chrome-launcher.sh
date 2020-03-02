@@ -2,7 +2,7 @@
 
 # run the script in sudo mode
 if ! [ $(id -u) = 0 ]; then
-   echo -e "The script needs to be run as root. Run by using -- \n\t\t "sudo `basename "$0"`"" >&2
+   echo -e "The script needs to be run as root. Run by using -- \n\t\t "sudo bash `basename "$0"`"" >&2
    exit 1
 fi
 
@@ -12,7 +12,7 @@ DESKTOPFILE="/usr/share/applications/google-chrome.desktop"
 # remove existing .desktop file
 rm -f $DESKTOPFILE
 
-tee -a $FILE << 'EOF' > /dev/null
+tee -a $DESKTOPFILE << 'EOF' > /dev/null
 [Desktop Entry]
 Version=1.0
 Name=Google Chrome
