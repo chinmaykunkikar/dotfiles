@@ -1,32 +1,38 @@
 # mkdir and cd into the directory
 function mkcd() {
   mkdir -p "$@" && cd "$@"
-}
-
-# install
-function innstall() {
-  sudo apt install "$@"
+  echo "Changed to new directory from $(tput bold)'$(echo $OLDPWD)' -> '$(pwd)'$(tput sgr0)"
 }
 
 # cd working
 function wk() {
-if [ -d "/home/chinmay/working" ]; then
-  cd ~/working/"$1"
-else
-  echo -e "Cannot find ~/working directory."
-fi
+  working=/home/$(whoami)/working
+  if [ -d $working ]; then
+    if [[ "$1" == '-l' || "$1" == '--list' ]]; then
+      ls -l $working
+    elif [ "$1" ]; then
+      for subdir in "$1"; do
+        echo $subdir
+        cd ${working}/${subdir}
+      done
+    else
+      cd ${working}
+    fi
+  else
+    echo -e "Could not find ~/working directory."
+  fi
 }
-
-# reposync
-#function repo() {
-#if [ $1 == "sync" ]; then
-#  ~/bin/repo sync -c -j8 --force-sync --no-clone-bundle --no-tags
-#else
-#  ~/bin/repo
-#fi
-#}
 
 # cd downloads
 function dl() {
-  cd ~/Downloads
+  downloads=/home/$(whoami)/Downloads
+  if [ -d $downloads ]; then
+    if [[ "$1" == '-l' || "$1" == '--list' ]]; then
+      ls -l $downloads
+    else
+      cd ${downloads}
+    fi
+  else
+    echo -e "Could not find ~/Downloads directory."
+  fi
 }
