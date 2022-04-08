@@ -12,7 +12,6 @@ function wk() {
       ls -l $working
     elif [ "$1" ]; then
       for subdir in "$1"; do
-        echo $subdir
         cd ${working}/${subdir}
       done
     else
