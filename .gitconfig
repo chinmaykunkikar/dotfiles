@@ -16,4 +16,4 @@
 	se = !git rev-list --all | xargs git grep -F
 	br = branch --format=\"%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]\" --sort=-committerdate
 	save = !git add -A && git commit -m 'chore: savepoint'
-    	undo = reset HEAD~1 --mixed
+	undo = reset HEAD~1 --mixed
