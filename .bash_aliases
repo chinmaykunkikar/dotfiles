@@ -1,14 +1,11 @@
-alias update='sudo apt update'
-alias upgrade='sudo apt update && sudo apt upgrade'
 alias rm='rm -fr'
-alias apt='sudo apt'
-alias apt-get='apt' # to-do: see how not to lose color
-alias ls='ls --color=auto --group-directories-first -AXgho'
+alias ls='exa --long --all --no-user --group-directories-first --git --sort=ext --sort=size --header'
+alias ll='exa --long --all --no-user --group-directories-first --git --sort=ext --sort=size --header'
+alias l='exa --long --all --no-user --group-directories-first --git --sort=ext --sort=size --header'
 alias g='git'
-
-
-alias nano='vim'
-#
-# No I'm not crazy. Just trying to use vim as default editor.
-# They say it is very powerful.
-#
+alias open='xdg-open'
+alias code='code .'
+alias dnfu='sudo dnf up'
+alias xx='exit'
+alias oo='sudo reboot'
+alias qq='sudo poweroff'
