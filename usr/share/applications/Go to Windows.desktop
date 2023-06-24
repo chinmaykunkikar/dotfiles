@@ -1,7 +1,0 @@
-[Desktop Entry]
-Name=Go to Windows
-Exec=sudo /opt/reboot-to-windows
-Comment=Reboot to Windows 10
-Terminal=true
-Icon=microsoft
-Type=Application

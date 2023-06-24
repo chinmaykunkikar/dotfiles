@@ -1,8 +1,0 @@
-#!/usr/bin/env xdg-open
-[Desktop Entry]
-Name=OneDrive
-Exec=google-chrome --app="data:text/html,<html><body><script>window.resizeTo(800,600);window.location='https://onedrive.live.com/';</script></body></html>"
-Comment=
-Terminal=false
-Icon=web-microsoft-onedrive
-Type=Application

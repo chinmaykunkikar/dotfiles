@@ -1,3 +1,0 @@
-#!/bin/bash
-/usr/sbin/grub-reboot "Windows"
-/sbin/reboot
