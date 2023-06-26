@@ -1,0 +1,10 @@
+#
+# WARNING: Use with caution.
+#
+# Do not ask USER for password while running sudo
+# Change the USER alias with your own username
+#
+
+User_Alias USER = chinmay
+
+USER ALL=(ALL) NOPASSWD: ALL
