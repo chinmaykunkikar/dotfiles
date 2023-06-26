@@ -1,5 +1,5 @@
 # mkdir and cd into the directory
-mkcd() {
+function mkcd() {
   if [ -d "$1" ]; then
     cd "$1" && echo "Changed to existing directory: $(tput bold)'$PWD'$(tput sgr0)"
   else
@@ -9,32 +9,31 @@ mkcd() {
 
 # cd working
 function wk() {
-  working=/home/$(whoami)/working
-  if [ -d $working ]; then
+  working="/home/$(whoami)/working"
+  if [ -d "$working" ]; then
     if [[ "$1" == 'l' || "$1" == '--list' ]]; then
-      ls $working
+      ls "$working"
     elif [ "$1" ]; then
-      for subdir in "$1"; do
-        cd ${working}/${subdir}
-      done
+      cd "$working/$1"
     else
-      cd ${working}
+      cd "$working"
     fi
   else
-    echo -e "Could not find ~/working directory."
+    echo "Could not find ~/working directory."
   fi
 }
 
 # cd downloads
 function dl() {
-  downloads=/home/$(whoami)/Downloads
-  if [ -d $downloads ]; then
+  downloads="/home/$(whoami)/Downloads"
+  if [ -d "$downloads" ]; then
     if [[ "$1" == 'l' || "$1" == '--list' ]]; then
-      ls -l $downloads
+      ls "$downloads"
     else
-      cd ${downloads}
+      cd "$downloads"
     fi
   else
-    echo -e "Could not find ~/Downloads directory."
+    echo "Could not find ~/Downloads directory."
   fi
 }
+
