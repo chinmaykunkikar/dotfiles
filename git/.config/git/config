@@ -1,14 +1,35 @@
 [user]
 	email = chinmay.kunkikar@gmail.com
 	name = Chinmay Kunkikar
+
 [core]
 	editor = nano
+
+	# Configure pager settings for 'less'
+	# The '-Mi' options enable a detailed status line and ignore case in searches
+	# The '-+F' option disables quitting if output fits on one screen (for short output)
+	# See http://stackoverflow.com/a/19871578/470844 for more details
+	#
+	#pager = less -Mi +Gg
+	pager = less -Mi -+F
+
 [credential]
 	helper = store
+
 [init]
 	defaultBranch = master
+
 [help]
 	autocorrect = 10
+
+[apply]
+	whitespace = fix
+
+[push]
+    # Make `git push` only push the current branch, and only if it has
+    # matching name upstream branch.
+    default = simple
+
 [alias]
 	st = status
 	cl = clone
@@ -17,7 +38,15 @@
 	del = branch -D
 	cob = checkout -b
 	co = checkout
+
+	# Format branch listing with author, subject, and relative commit date
+	# Sorted by committer date in descending order
 	br = "branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate"
+
 	fch = fetch --all
+
+	# Add and commit changes with a savepoint message
 	save = "!git add -A && git commit -m 'chore: savepoint'"
+
+	# Undo the last commit while keeping the changes staged
 	undo = "reset HEAD~1 --mixed"
