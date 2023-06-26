@@ -1,10 +1,10 @@
-alias rm='rm -fr'
+alias rm='rm --force --recursive'
 alias ls='exa --long --all --no-user --group-directories-first --git --sort=ext --sort=size --header'
 alias l='exa --long --all --no-user --group-directories-first --git --sort=ext --sort=size --header'
 alias g='git'
 alias open='xdg-open'
 alias code='code .'
-alias dnfu='sudo dnf up'
+alias dnfu='sudo dnf upgrade'
 alias dnfi='sudo dnf install'
 alias xx='exit'
 
