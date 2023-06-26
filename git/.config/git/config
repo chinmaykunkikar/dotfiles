@@ -5,18 +5,19 @@
 	editor = nano
 [credential]
 	helper = store
+[init]
+	defaultBranch = master
+[help]
+	autocorrect = 10
 [alias]
 	st = status
 	cl = clone
 	rv = remote -v
-	se = !git rev-list --all | xargs git grep -F
+	se = "!git rev-list --all | xargs git grep -F"
 	del = branch -D
 	cob = checkout -b
 	co = checkout
-	br = branch --format=\"%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]\" --sort=-committerdate
+	br = "branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate"
 	fch = fetch --all
-	save = !git add -A && git commit -m 'chore: savepoint'
-    undo = reset HEAD~1 --mixed
-
-[init]
-	defaultBranch = master
+	save = "!git add -A && git commit -m 'chore: savepoint'"
+	undo = "reset HEAD~1 --mixed"
