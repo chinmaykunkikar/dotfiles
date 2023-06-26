@@ -1,7 +1,10 @@
 # mkdir and cd into the directory
-function mkcd() {
-  mkdir -p "$@" && cd "$@"
-  echo "Changed to new directory from $(tput bold)'$(echo $OLDPWD)' -> '$(pwd)'$(tput sgr0)"
+mkcd() {
+  if [ -d "$1" ]; then
+    cd "$1" && echo "Changed to existing directory: $(tput bold)'$PWD'$(tput sgr0)"
+  else
+    mkdir -p "$@" && cd "$@" && echo "Changed to new directory: $(tput bold)'$PWD'$(tput sgr0)"
+  fi
 }
 
 # cd working
