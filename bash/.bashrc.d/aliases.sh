@@ -22,5 +22,7 @@ alias npmi='npm install'
 alias npmr='npm uninstall'
 alias npmup='npx npm-check-updates'
 
-# Server related
-alias srvc='ssh -i ~/.ssh/supernova chinmay@192.168.0.123'
+# Network
+alias sshs='ssh chinmay@192.168.0.123'
+alias sshw='ssh chinmay@192.168.0.122'
+alias eip='dig +short myip.opendns.com @resolver1.opendns.com'
