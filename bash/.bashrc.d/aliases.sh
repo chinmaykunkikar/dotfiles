@@ -27,3 +27,8 @@ alias npmup='npx npm-check-updates'
 alias sshs='ssh chinmay@192.168.0.123'
 alias sshw='ssh chinmay@192.168.0.122'
 alias eip='dig +short myip.opendns.com @resolver1.opendns.com'
+
+# Connect to protonvpn (protonvpn.com/support/linux-vpn-tool)
+alias vpnct='protonvpn-cli connect'
+alias vpndt='protonvpn-cli disconnect'
+alias vpnst='protonvpn-cli status'
