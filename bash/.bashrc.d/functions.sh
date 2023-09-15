@@ -9,17 +9,19 @@ function mkcd() {
 
 # cd working
 function wk() {
-  working="/home/$(whoami)/working"
-  if [ -d "$working" ]; then
-    if [[ "$1" == 'l' || "$1" == '--list' ]]; then
-      ls "$working"
+  working=/home/$(whoami)/working
+  if [ -d $working ]; then
+    if [[ "$1" == '-l' || "$1" == '--list' ]]; then
+      ls -l $working
     elif [ "$1" ]; then
-      cd "$working/$1"
+      for subdir in "$1"; do
+        cd ${working}/${subdir}
+      done
     else
-      cd "$working"
+      cd ${working}
     fi
   else
-    echo "Could not find ~/working directory."
+    echo -e "Could not find ~/working directory."
   fi
 }
 
