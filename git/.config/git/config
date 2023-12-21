@@ -50,3 +50,5 @@
 
 	# Undo the last commit while keeping the changes staged
 	undo = "reset HEAD~1 --mixed"
+	f = fetch
+	m = merge
