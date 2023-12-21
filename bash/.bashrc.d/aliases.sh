@@ -10,6 +10,7 @@ alias sudo='sudo '
 
 # DNF package manager
 alias dnfu='sudo dnf upgrade'
+alias dnfur='sudo dnf upgrade --refresh'
 alias dnfi='sudo dnf install'
 alias dnfr='sudo dnf remove'
 
@@ -23,8 +24,11 @@ alias npmi='npm install'
 alias npmr='npm uninstall'
 alias npmup='npx npm-check-updates'
 
+# Bun
+alias buni='bun install'
+
 # Network
-alias sshs='ssh chinmay@192.168.0.123'
+alias sshs='ssh chinmay@192.168.0.120'
 alias sshw='ssh chinmay@192.168.0.122'
 alias eip='dig +short myip.opendns.com @resolver1.opendns.com'
 
