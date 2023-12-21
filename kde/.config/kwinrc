@@ -8,15 +8,19 @@ OpenGLIsUnsafe=false
 [Desktops]
 Id_1=9084ed21-d35e-4d0b-85bf-112c4a34e4c5
 Id_2=d2481e4c-b3b5-4646-9b61-503890035d8c
+Id_3=d1dce1d6-74be-4731-882c-752c0f89682e
 Name_1=Neptune
 Name_2=Pluto
-Number=2
+Name_3=Venus
+Number=3
 Rows=1
 
+[Effect-blur]
+BlurStrength=7
+NoiseStrength=11
+
 [Effect-slide]
-HorizontalGap=60
-SlideBackground=false
-VerticalGap=40
+HorizontalGap=5
 
 [NightColor]
 Active=true
@@ -24,6 +28,9 @@ DayTemperature=5700
 LatitudeAuto=19.1518
 LongitudeAuto=72.9958
 NightTemperature=4000
+
+[Plugins]
+blurEnabled=true
 
 [TabBox]
 LayoutName=org.kde.breeze.desktop
@@ -38,6 +45,23 @@ padding=4
 [Tiling][213a9620-187e-58a6-b80b-85d8fb95dfce]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.15000000000000002},{"layoutDirection":"vertical","tiles":[{"height":0.5},{"height":0.5}],"width":0.85}]}
 
+[Tiling][5b7a5ba4-43cc-5910-8e98-f358f9d54b43]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][a55f545b-8749-584a-b273-0e24e900112f]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][d2392884-1c18-5cdb-91e2-754b549214ca]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][d8ba5678-9ed7-5a5d-8078-3aabadcc3a9d]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][eba0c793-a8bd-59f4-8b88-3b0dd04b0640]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [org.kde.kdecoration2]
+BorderSize=None
+BorderSizeAuto=false
 library=org.kde.breeze
 theme=Breeze
