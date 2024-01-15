@@ -1,7 +1,7 @@
 # Common
 alias rm='rm --force --recursive'
-alias ls='exa --long --all --no-user --group-directories-first --git --sort=ext --sort=size --header'
-alias l='exa --long --all --no-user --group-directories-first --git --sort=ext --sort=size --header'
+alias ls='eza --long --all --no-user --group-directories-first --git --sort=ext --sort=size --header'
+alias l='eza --long --all --no-user --group-directories-first --git --sort=ext --sort=size --header'
 alias g='git'
 alias open='xdg-open'
 alias code='code .'
