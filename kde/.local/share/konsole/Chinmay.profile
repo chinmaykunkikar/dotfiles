@@ -2,6 +2,7 @@
 AntiAliasFonts=true
 BoldIntense=true
 ColorScheme=shapeshifter.dark
+EmojiFont=Noto Color Emoji,18,-1,5,50,0,0,0,0,0
 Font=JetBrains Mono,13,-1,5,50,0,0,0,0,0
 TabColor=128,128,0
 UseFontLineChararacters=false

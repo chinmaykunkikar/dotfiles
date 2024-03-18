@@ -1,13 +1,21 @@
 MenuBar=Disabled
 
 [$Version]
-update_info=dolphin_detailsmodesettings.upd:rename-leading-padding
+update_info=dolphin_detailsmodesettings.upd:rename-leading-padding,dolphin_detailsmodesettings.upd:move-content-display
 
 [CreateDialog]
 LastMimeType=application/zip
 
+[DetailsMode]
+PreviewSize=80
+
+[ExtractDialog]
+1920x1200 screen: Height=740
+1920x1200 screen: Width=1280
+DirHistory[$e]=$HOME/Downloads/Photos-001/
+
 [General]
-LockPanels=false
+ConfirmClosingMultipleTabs=false
 RememberOpenedTabs=false
 ShowFullPath=true
 ShowFullPathInTitlebar=true
@@ -20,11 +28,18 @@ PreviewSize=144
 
 [KFileDialog Settings]
 Places Icons Auto-resize=false
-Places Icons Static Size=22
+Places Icons Static Size=32
+Recent Files[$e]=file:$HOME/Downloads/Photos-001,file:$HOME/Downloads/Photos-001
+Recent URLs[$e]=file:$HOME/Downloads/Photos-001/
+detailViewIconSize=16
 
 [KPropertiesDialog]
-1536x960 screen: Height=504
+1536x960 screen: Height=532
 1536x960 screen: Width=438
+1920x1200 screen: Height=532
+1920x1200 screen: Width=488
+2 screens: Height=559
+2 screens: Width=545
 eDP-1 Height 1280x800 eDP-1=532
 eDP-1 Height 1536x960 eDP-1=464
 eDP-1 Width 1280x800 eDP-1=437
@@ -33,6 +48,9 @@ eDP-1 Width 1536x960 eDP-1=385
 [MainWindow]
 MenuBar=Disabled
 ToolBarsMovable=Disabled
+
+[PlacesPanel]
+IconSize=32
 
 [PreviewSettings]
 Plugins=audiothumbnail,cursorthumbnail,ebookthumbnail,directorythumbnail,imagethumbnail,jpegthumbnail,opendocumentthumbnail,gsthumbnail,rawthumbnail,svgthumbnail

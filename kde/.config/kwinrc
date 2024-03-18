@@ -2,17 +2,19 @@
 update_info=kwin.upd:replace-scalein-with-scale,kwin.upd:port-minimizeanimation-effect-to-js,kwin.upd:port-scale-effect-to-js,kwin.upd:port-dimscreen-effect-to-js,kwin.upd:auto-bordersize,kwin.upd:animation-speed,kwin.upd:desktop-grid-click-behavior,kwin.upd:no-swap-encourage,kwin.upd:make-translucency-effect-disabled-by-default,kwin.upd:remove-flip-switch-effect,kwin.upd:remove-cover-switch-effect,kwin.upd:remove-cubeslide-effect,kwin.upd:remove-xrender-backend,kwin.upd:enable-scale-effect-by-default,kwin.upd:overview-group-plugin-id,kwin.upd:animation-speed-cleanup,kwin.upd:replace-cascaded-zerocornered
 
 [Compositing]
-LatencyPolicy=High
+LatencyPolicy=Low
 OpenGLIsUnsafe=false
 
 [Desktops]
 Id_1=9084ed21-d35e-4d0b-85bf-112c4a34e4c5
 Id_2=d2481e4c-b3b5-4646-9b61-503890035d8c
 Id_3=d1dce1d6-74be-4731-882c-752c0f89682e
-Name_1=Neptune
-Name_2=Pluto
-Name_3=Venus
-Number=3
+Id_4=ddf8aa96-3df5-4d5d-8162-6136c73afa38
+Name_1=Venus
+Name_2=Jupiter
+Name_3=Neptune
+Name_4=Pluto
+Number=4
 Rows=1
 
 [Effect-blur]
@@ -21,6 +23,13 @@ NoiseStrength=11
 
 [Effect-slide]
 HorizontalGap=5
+VerticalGap=0
+
+[Effect-windowview]
+BorderActivateAll=9
+
+[Input]
+TabletMode=off
 
 [NightColor]
 Active=true
@@ -30,10 +39,18 @@ LongitudeAuto=72.9958
 NightTemperature=4000
 
 [Plugins]
-blurEnabled=true
+blurEnabled=false
+kwin4_effect_glideEnabled=true
+kwin4_effect_minimize_kineticEnabled=true
+kwin4_effect_scaleEnabled=false
+kwin4_effect_squashEnabled=false
+sheetEnabled=true
+
+[Script-desktopchangeosd]
+PopupHideDelay=400
+TextOnly=true
 
 [TabBox]
-LayoutName=org.kde.breeze.desktop
 ShowTabBox=false
 
 [TabBoxAlternative]
@@ -42,8 +59,14 @@ LayoutName=thumbnails
 [Tiling]
 padding=4
 
+[Tiling][07e87ff4-a069-594f-8a12-a3c0b419fa2f]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Tiling][213a9620-187e-58a6-b80b-85d8fb95dfce]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.15000000000000002},{"layoutDirection":"vertical","tiles":[{"height":0.5},{"height":0.5}],"width":0.85}]}
+
+[Tiling][4d1a5786-55ff-59a5-95d7-5696c93a4f0c]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][5b7a5ba4-43cc-5910-8e98-f358f9d54b43]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
@@ -60,8 +83,9 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 [Tiling][eba0c793-a8bd-59f4-8b88-3b0dd04b0640]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
+[Windows]
+ElectricBorderCornerRatio=0.15
+
 [org.kde.kdecoration2]
 BorderSize=None
 BorderSizeAuto=false
-library=org.kde.breeze
-theme=Breeze

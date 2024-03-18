@@ -7,6 +7,7 @@ alias open='xdg-open'
 alias code='code .'
 alias xx='exit'
 alias sudo='sudo '
+alias poweroff='sudo systemctl poweroff'
 
 # DNF package manager
 alias dnfu='sudo dnf upgrade'

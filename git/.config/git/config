@@ -52,3 +52,5 @@
 	undo = "reset HEAD~1 --mixed"
 	f = fetch
 	m = merge
+[rerere]
+	enabled = true
