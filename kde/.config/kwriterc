@@ -4,17 +4,18 @@ Auto Hide Tabs=true
 Close After Last=true
 Close documents with window=true
 Days Meta Infos=30
-Diff Show Style=0
+Diff Show Style=1
 Elide Tab Text=false
 Expand Tabs=false
 Modified Notification=false
 Mouse back button action=1
 Mouse forward button action=0
+Open New Tab To The Right Of Current=true
 Recent File List Entry Count=10
 Restore Window Configuration=true
 SDI Mode=false
 Save Meta Infos=true
-Show Full Path in Title=false
+Show Full Path in Title=true
 Show Menu Bar=false
 Show Status Bar=true
 Show Symbol In Navigation Bar=true
@@ -30,8 +31,8 @@ Tab Middle Click Close Document=true
 Tabbar Tab Limit=0
 
 [KFileDialog Settings]
-Recent Files[$e]=file:$HOME/Downloads/Resume Cover Letters/Resume.txt,file:$HOME/.npm/_logs/2024-03-04T11_15_48_997Z-debug.log,file:$HOME/tribe/bisect-reloading.log,file:$HOME/Downloads/Resume Cover Letters/Chinmay_Kunkikar_full_resume.txt
-Recent URLs[$e]=file:$HOME/,file:///etc/grub.d/,file:$HOME/Downloads/Resume Cover Letters/,file:$HOME/Documents/,file:$HOME/Downloads/,file:$HOME/working/,file:$HOME/tribe/
+Recent Files[$e]=file:$HOME/Downloads/Resume Cover Letters/Resume.txt,file:$HOME/.zshenv,file:$HOME/Downloads/Resume Cover Letters/Chinmay_Kunkikar_full_resume.txt
+Recent URLs[$e]=file:$HOME/,file:///etc/grub.d/,file:$HOME/Downloads/Resume Cover Letters/,file:$HOME/Documents/,file:$HOME/Downloads/,file:$HOME/tribe/
 detailViewIconSize=16
 
 [KPropertiesDialog]
@@ -66,7 +67,7 @@ Overwrite Mode=false
 PageUp/PageDown Moves Cursor=false
 Remove Spaces=1
 ReplaceTabsDyn=true
-Show Spaces=0
+Show Spaces=1
 Show Tabs=true
 Smart Home=true
 Swap Directory=
@@ -74,7 +75,7 @@ Swap File Mode=1
 Swap Sync Interval=15
 Tab Handling=2
 Tab Width=4
-Trailing Marker Size=1
+Trailing Marker Size=2
 Word Wrap=false
 Word Wrap Column=80
 
@@ -85,8 +86,8 @@ Fallback Encoding=ISO 8859-15
 [KTextEditor Renderer]
 Animate Bracket Matching=false
 Auto Color Theme Selection=false
-Color Theme=ayu Dark
-Font=JetBrains Mono,11,-1,5,50,0,0,0,0,0
+Color Theme=Atom One Dark
+Font=JetBrains Mono,14,-1,5,50,0,0,0,0,0
 Line Height Multiplier=1
 Show Indentation Lines=false
 Show Whole Bracket Expression=true
@@ -100,7 +101,7 @@ Auto Completion=true
 Auto Completion Preselect First Entry=true
 Backspace Remove Composed Characters=false
 Bookmark Menu Sorting=0
-Bracket Match Preview=false
+Bracket Match Preview=true
 Chars To Enclose Selection=<>(){}[]'"
 Default Mark Type=1
 Dynamic Word Wrap=true
@@ -114,7 +115,7 @@ Folding Bar=true
 Folding Preview=true
 Icon Bar=false
 Input Mode=0
-Keyword Completion=true
+Keyword Completion=false
 Line Modification=true
 Line Numbers=true
 Max Clipboard History Entries=20
@@ -134,14 +135,14 @@ Show Documentation With Completion=true
 Show File Encoding=true
 Show Focus Frame Around Editor=true
 Show Folding Icons On Hover Only=true
-Show Line Count=false
+Show Line Count=true
 Show Scrollbars=0
 Show Statusbar Dictionary=true
 Show Statusbar Highlighting Mode=true
 Show Statusbar Input Mode=true
 Show Statusbar Line Column=true
 Show Statusbar Tab Settings=true
-Show Word Count=false
+Show Word Count=true
 Smart Copy Cut=true
 Statusbar Line Column Compact Mode=true
 Text Drag And Drop=true
@@ -153,8 +154,8 @@ Word Completion Minimal Word Length=3
 Word Completion Remove Tail=true
 
 [KTextEditor::Search]
-Replace History=,h4,-
-Search History=HEAD,\\\\[..\\\\]$,\\\\[.*\\\\]$,[.*]$,^\\\\[.*\\\\]$,\\\\[.*\\\\],[.*],^[.*]$,search,filters,MjYyMTMyMDI3MDc3MTkyN2MxMGIxZGFmN2YzZDYxODRhOGM1NTc1YzAwOTg5NmRiZjlhYzRiZGQyNjM4MWNkZWZpbHRlcnM9Y291cnNlVWlkJTNBOUgyRTg1WFI3WVM3,courseUid,course,h3,c vcf dx.0         ,c vcf dx,share,virtualbox,◦,g,reboot\\\\n,ls\\\\n,exit\\\\n,poweroff\\\\n,flup\\\\n,wk\\\\n,'\\\\n,xx\\\\n,\\\\n\\\\n,\\\\n,\\\\m,flup,dnfu,>,> ,chinmay,source,sansserif,serif,fullpage,extra,sc-12s41qg,map__
+Replace History=#5b4e3b,#5B4E3B,#433726,#746653,,h4,-
+Search History=inner fa-spin,#98971a,#5B4E3B,#a89984,HEAD,\\\\[..\\\\]$,\\\\[.*\\\\]$,[.*]$,^\\\\[.*\\\\]$,\\\\[.*\\\\],[.*],^[.*]$,search,filters,MjYyMTMyMDI3MDc3MTkyN2MxMGIxZGFmN2YzZDYxODRhOGM1NTc1YzAwOTg5NmRiZjlhYzRiZGQyNjM4MWNkZWZpbHRlcnM9Y291cnNlVWlkJTNBOUgyRTg1WFI3WVM3,courseUid,course,h3,c vcf dx.0         ,c vcf dx,share,virtualbox,◦,g,reboot\\\\n,ls\\\\n,exit\\\\n,poweroff\\\\n,flup\\\\n,wk\\\\n,'\\\\n,xx\\\\n,\\\\n\\\\n,\\\\n,\\\\m,flup,dnfu,>,> ,chinmay,source,sansserif,serif,fullpage,extra,sc-12s41qg,map__
 
 [MainWindow]
 1536x960 screen: Window-Maximized=true

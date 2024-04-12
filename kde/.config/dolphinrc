@@ -21,7 +21,7 @@ ShowFullPath=true
 ShowFullPathInTitlebar=true
 UseTabForSwitchingSplitView=true
 Version=202
-ViewPropsTimestamp=2022,11,8,19,32,24.875
+ViewPropsTimestamp=2024,3,30,23,13,4.221
 
 [IconsMode]
 PreviewSize=144
@@ -54,6 +54,9 @@ IconSize=32
 
 [PreviewSettings]
 Plugins=audiothumbnail,cursorthumbnail,ebookthumbnail,directorythumbnail,imagethumbnail,jpegthumbnail,opendocumentthumbnail,gsthumbnail,rawthumbnail,svgthumbnail
+
+[Search]
+Location=Everywhere
 
 [VersionControl]
 enabledPlugins=Git
