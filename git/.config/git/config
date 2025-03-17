@@ -28,7 +28,7 @@ helper = !/opt/homebrew/bin/gh auth git-credential
 defaultBranch = master
 
 [help]
-autocorrect = 20
+autocorrect = prompt
 
 [status]
 # Show branch and stats in short format
@@ -41,6 +41,7 @@ whitespace = fix
 [rebase]
 # Auto stash/unstash during rebase
 autoStash = true
+updateRefs = true
 
 [push]
 # Default to current branch
@@ -48,9 +49,9 @@ autoStash = true
 default = current
 # Automatically handle force-with-lease
 autoForceWithLease = true
+autoSetupRemote = true
 
 [pull]
-# Avoid merge commits on pull
 rebase = true
 
 [alias]
@@ -84,3 +85,16 @@ enabled = true
 [maintenance]
 repo = /Users/chinmay/tribe/cohort-live-web
 repo = /Users/chinmay/tribe/xaviers-dashboard
+
+[merge]
+conflictstyle = zdiff3
+
+[fetch]
+prune = true
+pruneTags = true
+
+[diff]
+colorMoved = plain
+mnemonicPrefix = true
+renames = true
+algorithm = histogram
