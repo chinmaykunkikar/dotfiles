@@ -1,0 +1,105 @@
+[user]
+email = chinmay.kunkikar@gmail.com
+name = Chinmay Kunkikar
+
+[core]
+editor = nano
+whitespace = trailing-space,space-before-tab,indent-with-non-tab
+
+# Configure pager settings for 'less'
+# The '-Mi' options enable a detailed status line and ignore case in searches
+# The '-+F' option disables quitting if output fits on one screen (for short output)
+# See http://stackoverflow.com/a/19871578/470844 for more details
+#
+#pager = less -Mi +Gg
+#pager = less -Mi -+F
+	pager = delta
+ignorecase = true
+
+[credential "https://github.com"]
+helper =
+helper = !/opt/homebrew/bin/gh auth git-credential
+
+[credential "https://gist.github.com"]
+helper =
+helper = !/opt/homebrew/bin/gh auth git-credential
+
+[init]
+defaultBranch = master
+
+[help]
+autocorrect = prompt
+
+[status]
+# Show branch and stats in short format
+branch = true
+
+[apply]
+whitespace = fix
+
+[rebase]
+# Auto stash/unstash during rebase
+autoStash = true
+updateRefs = true
+
+[push]
+# Default to current branch
+# default = simple
+default = current
+# Automatically handle force-with-lease
+autoForceWithLease = true
+autoSetupRemote = true
+
+[pull]
+rebase = true
+
+[alias]
+st = status
+se = "!git rev-list --all | xargs git grep -F -n"
+co = checkout
+pr = "!gh pr create"
+
+# Format branch listing with author, subject, and relative commit date
+# Sorted by committer date in descending order
+br = "!git --no-pager branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:white)%(contents:subject)%(color:reset) %(color:green)(%(committerdate:relative))%(color:reset) %(color:blue)[%(authorname)]%(color:reset)' --sort=-committerdate"
+
+# Safely sync master and rebase current branch
+remaster = "!f() { \
+        current=$(git branch --show-current) && \
+        git switch master && \
+        git pull && \
+        git switch \"$current\" && \
+        git rebase master; \
+        }; f"
+
+# Undo the last commit while keeping the changes staged
+undo = "reset HEAD~1 --mixed --preserve-untracked"
+fame = !python3 -m gitfame
+nb = "!f() { git switch -c \"$1\" \"origin/$1\"; }; f"
+	clean-branches = !git-delete-branches
+
+[rerere]
+enabled = true
+
+[merge]
+	conflictstyle = diff3
+
+[fetch]
+prune = true
+pruneTags = true
+
+[diff]
+	colorMoved = default
+mnemonicPrefix = true
+renames = true
+algorithm = histogram
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	dark = true
+	line-numbers = true
+	side-by-side = false
+	syntax-theme = TwoDark
+	file-style = bold yellow
+	hunk-header-style = file line-number syntax

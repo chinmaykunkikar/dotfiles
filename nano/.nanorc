@@ -1,0 +1,52 @@
+# Syntax highlighting for all supported languages
+include "/opt/homebrew/share/nano/*.nanorc"
+include "/opt/homebrew/share/nano/extra/*.nanorc"
+
+# Line numbers in the gutter
+set linenumbers
+
+# Soft-wrap long lines instead of hard-wrapping
+set softwrap
+
+# Show cursor position in the status bar
+set constantshow
+
+# Use spaces instead of tabs
+set tabsize 4
+set tabstospaces
+
+# Auto-indent new lines
+set autoindent
+
+# Remember search history and cursor position between sessions
+set historylog
+set positionlog
+
+# Smarter home key (jumps to first non-whitespace)
+set smarthome
+
+# Don't add newline at end of file if missing (git messages)
+set nonewlines
+
+# Trim trailing whitespace on save
+set trimblanks
+
+# Show matching bracket when cursor is on one
+set matchbrackets "(<[{)>]}"
+
+# Skip the "Save modified buffer?" prompt on exit for piped input
+set noconvert
+
+# Theme (Catppuccin Mocha inspired)
+set titlecolor bold,#cdd,#334
+set statuscolor bold,#cdd,#334
+set promptcolor #cdd,#334
+set errorcolor bold,#f57,#334
+set selectedcolor #181,#558
+set spotlightcolor #181,#f5c
+set numbercolor #558
+set keycolor #f5c
+set functioncolor #89b
+set stripecolor ,#334
+set scrollercolor #cdd,#445
+set minicolor #cdd,#334

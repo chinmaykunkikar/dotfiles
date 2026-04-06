@@ -1,0 +1,131 @@
+# Font
+font-family = JetBrains Mono
+font-size = 14
+font-feature = calt
+font-feature = clig
+font-feature = liga
+
+# Colors
+background = 101010
+foreground = afafaf
+cursor-color = c7c7c7
+cursor-text = 101010
+selection-background = 554c49
+selection-foreground = c3c7ca
+
+# ANSI colors
+palette = 0=#242627
+palette = 1=#e95384
+palette = 2=#bde25a
+palette = 3=#f2ab47
+palette = 4=#8fdcef
+palette = 5=#a98bf7
+palette = 6=#748387
+palette = 7=#d5d5d0
+
+# Bright colors
+palette = 8=#636566
+palette = 9=#f086ac
+palette = 10=#cfec82
+palette = 11=#e9e091
+palette = 12=#8fdcef
+palette = 13=#a98bf7
+palette = 14=#b5c5c9
+palette = 15=#f9f9f5
+
+# Splits
+split-divider-color = #333333
+
+# Window
+background-opacity = 0.95
+background-blur-radius = 20
+macos-titlebar-style = tabs
+macos-window-shadow = true
+window-padding-x = 20
+window-padding-y = 20
+
+# Theme
+window-theme = ghostty
+
+# Shell integration
+shell-integration = zsh
+shell-integration-features = cursor,sudo,title
+
+# Cursor
+cursor-style = bar
+cursor-style-blink = false
+
+# Bell (disable audio, keep visual)
+bell-features = no-audio
+
+# Performance
+window-vsync = true
+scrollback-limit = 10000000
+
+# Misc
+confirm-close-surface = true
+copy-on-select = clipboard
+mouse-scroll-multiplier = 1
+clipboard-paste-protection = true
+window-save-state = always
+resize-overlay = never
+auto-update = check
+
+# Keybindings
+
+# Tab management
+keybind = super+t=new_tab
+keybind = super+w=close_surface
+
+# Pane splitting
+keybind = super+d=new_split:right
+keybind = super+shift+d=new_split:down
+
+# Pane navigation (vim-style)
+keybind = super+shift+h=goto_split:left
+keybind = super+shift+l=goto_split:right
+keybind = super+shift+k=goto_split:top
+keybind = super+shift+j=goto_split:bottom
+
+# Pane resize
+keybind = super+alt+h=resize_split:left,40
+keybind = super+alt+l=resize_split:right,40
+keybind = super+alt+k=resize_split:up,40
+keybind = super+alt+j=resize_split:down,40
+
+# Pane zoom
+keybind = super+z=toggle_split_zoom
+
+# Tab navigation
+keybind = super+shift+left_bracket=previous_tab
+keybind = super+shift+right_bracket=next_tab
+
+# Direct tab switching
+keybind = super+one=goto_tab:1
+keybind = super+two=goto_tab:2
+keybind = super+three=goto_tab:3
+keybind = super+four=goto_tab:4
+keybind = super+five=goto_tab:5
+keybind = super+six=goto_tab:6
+keybind = super+seven=goto_tab:7
+keybind = super+eight=goto_tab:8
+
+# Font size
+keybind = super+equal=increase_font_size:1
+keybind = super+minus=decrease_font_size:1
+keybind = super+zero=reset_font_size
+
+# Utilities
+keybind = super+k=clear_screen
+keybind = super+enter=toggle_fullscreen
+
+# Shift+Enter: newline instead of submit (for Claude Code)
+keybind = shift+enter=text:\x1b\r
+
+# SSH host picker (Tailscale tagged devices)
+keybind = super+shift+s=text:tssh\n
+
+# Quit / Hide / New window
+keybind = super+q=quit
+keybind = super+h=unbind
+keybind = super+n=new_window
