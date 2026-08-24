@@ -11,6 +11,7 @@ Each directory is a stow package. Stow creates symlinks from the package content
 | Package | What's in it |
 | ------- | ------------ |
 | btop | System monitor preferences |
+| cmux | cmux terminal: workspace colors by directory, custom `by-tree` sidebar, notification hooks, gstack actions |
 | gh | GitHub CLI config |
 | ghostty | Ghostty terminal (colors, keybindings, shell integration) |
 | git | Git config with [delta](https://github.com/dandavison/delta) pager, aliases, expanded global gitignore, and [git-delete-branches](git/.config/git/git-delete-branches) (fzf-powered branch cleanup) |

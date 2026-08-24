@@ -1,0 +1,142 @@
+{
+  "$schema": "https://raw.githubusercontent.com/manaflow-ai/cmux/main/web/data/cmux.schema.json",
+  "schemaVersion": 1,
+
+  // JSONC: comments and trailing commas allowed.
+  // Reload after editing: Cmd+Shift+, or `cmux reload-config`.
+  // Removing a key falls back to whatever is saved in Settings.
+
+  // ─────────────────────────────────────────────────────────────
+  // 1. GLOBAL POWER-USER DEFAULTS
+  // ─────────────────────────────────────────────────────────────
+  "app": {
+    "appearance": "dark",
+    "newWorkspacePlacement": "afterCurrent",
+    "reorderOnNotification": true,
+    "windowTitleTemplate": "[cmux] {activeWorkspace}",
+    // Floats the workspace up and shows your prompt like a chat bubble
+    // when you send an agent a message. Nice for the fire-and-watch flow.
+    "iMessageMode": true
+  },
+
+  "terminal": {
+    "copyOnSelect": true,
+    "autoResumeAgentSessions": true,
+    // Kills idle background agents to reclaim RAM/CPU, then resumes them
+    // with their full session when you revisit the tab. Essential once
+    // you have Claude/Codex running across several workspaces.
+    "agentHibernation": {
+      "enabled": true,
+      "idleSeconds": 120,
+      "maxLiveTerminals": 8
+    }
+  },
+
+  "browser": {
+    // Keep clicked terminal links inside cmux's embedded browser.
+    "openTerminalLinksInCmuxBrowser": true,
+    "interceptTerminalOpenCommandInCmuxBrowser": true
+    // Swap your search engine here if you want, e.g.:
+    // "defaultSearchEngine": "perplexity"   // google|duckduckgo|kagi|brave|exa|perplexity|...
+  },
+
+  "automation": {
+    "claudeCodeIntegration": true,
+    // Auto-name workspaces/tabs from the agent conversation, so the sidebar
+    // reads "Fix SSR hydration" instead of "zsh". Manual renames always win.
+    "workspaceAutoNaming": true,
+    "autoNamingAgent": "auto",
+    // Keep nested Codex/Claude subagent pings out of your face (Feed only).
+    "suppressSubagentNotifications": true
+  },
+
+  // Sidebar group header tint by cwd. Longest match wins; "/" is the catch-all.
+  "workspaceGroups": {
+    "byCwd": {
+      "~/workspace": { "color": "#39A78E", "icon": "hammer.fill" },
+      "~/tribe": { "color": "#C9A0DC", "icon": "building.2.fill" },
+      "/": { "color": "#E48400", "icon": "folder.fill" }
+    }
+  },
+
+  // Color-code the sidebar per project. Delete/rename freely.
+  "workspaceColors": {
+    "indicatorStyle": "leftRail",
+    "selectionColor": "#B4CB2E",
+    "colors": {
+      "Monument": "#A04000",
+      "Verba": "#196F3D",
+      "Flight Deck": "#1565C0",
+      "Pixeldex": "#6A1B9A",
+      "Kaivalya": "#7D6608",
+      "Job Search": "#C0392B",
+      "Scratch": "#3E4B5E",
+      "Zomp": "#39A78E",
+      "Fulvous": "#E48400",
+      "Wisteria": "#C9A0DC"
+    }
+  },
+
+  // Darker side panel: black tint, well above the 0.03 default.
+  "sidebarAppearance": {
+    "matchTerminalBackground": false,
+    "tintColor": "#000000",
+    "darkModeTintColor": "#000000",
+    "tintOpacity": 0.33
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // 2. NOTIFICATIONS
+  //    "Bottle" sound plays on every notification. The hook only hides
+  //    the desktop banner for chatty non-blocking pings; sound stays on.
+  // ─────────────────────────────────────────────────────────────
+  "notifications": {
+    "sound": "Bottle",
+    "hooksMode": "append",
+    "hooks": [
+      {
+        "id": "banner-only-when-blocked",
+        "command": "jq -c 'if (((.notification.subtitle // \"\") + \" \" + (.notification.body // \"\")) | test(\"wait|need|input|error|approve|fail|review\"; \"i\")) then . else .effects.desktop = false end'",
+        "timeoutSeconds": 10
+      }
+    ]
+  },
+
+  // ─────────────────────────────────────────────────────────────
+  // 3. GSTACK ACTIONS  (requires a cmux NIGHTLY build to appear in the
+  //    surface tab bar / Command Palette; ignored harmlessly on stable)
+  //    Each runs in a NEW tab in the current pane, inheriting its cwd,
+  //    so they act on whatever repo you're sitting in.
+  // ─────────────────────────────────────────────────────────────
+  "actions": {
+    "agent.claude": {
+      "type": "command",
+      "title": "Claude",
+      "subtitle": "New Claude Code session here",
+      "command": "claude",
+      "target": "newTabInCurrentPane",
+      "shortcut": "cmd+shift+c",
+      "icon": { "type": "symbol", "name": "sparkles" }
+    },
+    "gstack.investigate": {
+      "type": "command",
+      "title": "Investigate",
+      "subtitle": "Fresh agent running /investigate on this repo",
+      "command": "claude \"/investigate\"",
+      "target": "newTabInCurrentPane",
+      "palette": true,
+      "icon": { "type": "symbol", "name": "ladybug" }
+    }
+  },
+
+  "ui": {
+    "surfaceTabBar": {
+      "buttons": [
+        "cmux.newTerminal",
+        "cmux.newBrowser",
+        "cmux.splitRight",
+        "agent.claude"
+      ]
+    }
+  }
+}
